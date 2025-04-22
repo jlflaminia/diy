@@ -93,5 +93,27 @@
         </div>
     </div>
 
+    <section class="container">
+        <h1>Never Take Broken for an Answer</h1>
+        <p>Get the instructions you need with quality repair parts and tools and the expertise of a robust community.</p>
+        <div class="cards">
+            <div class="card">
+                <h2>Step-by-Step Guides</h2>
+                <p>Learn how to fix anything with simple, easy-to-follow instructions created by the community.</p>
+                <a href="#">Find a Guide</a>
+            </div>
+            <div class="card">
+                <h2>Quality Parts and Tools</h2>
+                <p>Precision tools and thousands of parts to get the job done, backed by our Lifetime Guarantee.</p>
+                <a href="#">Shop our Store</a>
+            </div>
+            <div class="card">
+                <h2>A Community of Fixers</h2>
+                <p>Join tools and resources for everyone who knows how to fix something.</p>
+                <a href="#">Fix the World</a>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>

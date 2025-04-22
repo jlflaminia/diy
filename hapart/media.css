@@ -76,4 +76,12 @@
         width: 100%; /* Make buttons take full width */
         font-size: 0.9rem;
     }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        max-width: 90%;
+    }
 }
