@@ -1,0 +1,79 @@
+/* General mobile styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust font size for better readability */
+        line-height: 1.4;
+    }
+
+    .header {
+        flex-direction: column; /* Stack header elements vertically */
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    .navbar a {
+        padding: 8px 10px; /* Reduce padding for smaller screens */
+        font-size: 0.9rem;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px;
+        width: 100%; /* Full width for links */
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 10px; /* Increase padding for touch-friendly links */
+        font-size: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Add spacing below the logo */
+    }
+
+    .main {
+        height: auto; /* Allow the main section to adjust dynamically */
+        padding: 20px;
+    }
+
+    .main h1 {
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Adjust subheading size */
+    }
+
+    .search-input {
+        width: 100%; /* Make the search input take full width */
+        font-size: 0.9rem;
+    }
+
+    .find-device {
+        width: 100%; /* Make the button take full width */
+        font-size: 0.9rem;
+    }
+
+    .categories {
+        flex-direction: column; /* Stack categories vertically */
+        gap: 20px;
+    }
+
+    .categories a img {
+        width: 70px; /* Reduce image size */
+        margin-top: 20px;
+    }
+
+    button {
+        width: 100%; /* Make buttons take full width */
+        font-size: 0.9rem;
+    }
+}
