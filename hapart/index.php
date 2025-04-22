@@ -4,28 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master DIY</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Master DIY</h1>
-        <div class="navbar">
-            <a href="#">Categories</a>
-            <a href="#">Community</a>
-            <a href="#">News</a>
-            <a href="#">Login</a>
-            <span></span>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo-img" width="30">
         </div>
-    </div>
+        <div class="logo">Master DIY</div>
+        <div class="nav-links">
+            <li><a href="home">Home</a></li>
+            <li class="dropdown">
+        <a href="categories" class="dropbtn">Categories</a>
+        <div class="dropdown-content">
+            <a href="categories/phone.php">Phone</a>
+            <a href="categories/computer.php">Computer</a>
+            <a href="categories/household.php">Household</a>
+            <a href="categories/appliances.php">Appliances</a>
+            <a href="categories/apparel.php">Apparel</a>
+        </div>
+    </li>
+            <li><a href="news">News</a></li>
+            <?php if (isset($_SESSION['username'])): ?>
+                <li><a href="logout.php">Logout</a></li>
+            <?php else: ?>
+                <li><a href="#" id="login-btn">Login</a></li>
+                <!-- <li><a href="#" id="register-btn">Register</a></li> -->
+            <?php endif; ?>
+        </div>
 
-    <!-- <div class="main">
-        <h2>Explore the World of Repair</h2>
-        <div class="search-box">
-            <input type="text" class="search-input" placeholder='Search' />
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-        <button class="button">Find your thing</button>
-    </div> -->
+    </nav>
+
 
     <div class="main">
     <h1>Welcome to Master DIY</h1>
@@ -35,16 +53,45 @@
         <input type="text" class="search-input" placeholder="Search for a device">
         <button class="find-device">Find Device</button>
     </div>
-    
-    <!-- <button>Learn More</button> -->
 
     <div class="categories">
-    <a href="categories/1.png"><img src="iphone.png" alt="Category 1"></a>
-    <a href="categories/2.png"><img src="monitor.png" alt="Category 2"></a>
-    <a href="categories/3.png"><img src="household-appliance.png" alt="Category 3"></a>
-    <a href="categories/4.png"><img src="home.png" alt="Category 4"></a>
-    <a href="categories/5.png"><img src="hang-clothes.png" alt="Category 5"></a>
+    <a href="categories/1.png"><img src="categories/iphone.png" alt="Category 1"></a>
+    <a href="categories/2.png"><img src="categories/monitor.png" alt="Category 2"></a>
+    <a href="categories/3.png"><img src="categories/household-appliance.png" alt="Category 3"></a>
+    <a href="categories/4.png"><img src="categories/home.png" alt="Category 4"></a>
+    <a href="categories/5.png"><img src="categories/hang-clothes.png" alt="Category 5"></a>
 </div>
+
+ <div id="login-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Login</h2>
+        <form action="login.php" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="register-btn">Register here</a>.</p>
+    </div>
+</div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Register</h2>
+            <form action="register.php" method="POST">
+                <label for="reg-username">Username:</label>
+                <input type="text" id="reg-username" name="username" required>
+                <label for="reg-password">Password:</label>
+                <input type="password" id="reg-password" name="password" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>
