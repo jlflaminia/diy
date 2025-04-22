@@ -46,7 +46,7 @@
 
 
     <div class="main">
-    <h1>Welcome to Master DIY</h1>
+    <h1>Welcome to Noob DIY</h1>
     
     <div class="search-box">
         <h2>Find the best repair guides</h2>
